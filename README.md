@@ -1,1 +1,2 @@
-# codepot-2015-chat
+## Javeo Polymer Chat
+
