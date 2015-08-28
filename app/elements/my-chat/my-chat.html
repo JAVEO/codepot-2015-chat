@@ -1,0 +1,40 @@
+<dom-module id="my-chat">
+    <template is="paper-material" elevation="1">
+        <paper-dialog id="login" modal>
+            <paper-input id="nick" label="Input your nick..." class="flex"></paper-input>
+            <paper-button raised on-tap="login">Login</paper-button>
+        </paper-dialog>
+        <firebase-collection id="chat" data="{{messages}}" location="https://glaring-inferno-8663.firebaseio.com/chat"></firebase-collection>
+        <template is="dom-repeat" items="{{messages}}">
+            <div>
+                <strong>{{item.user}}</strong>:
+                <span>{{item.message}}</span>
+            </div>
+        </template>
+        <div class="layout horizontal">
+            <paper-input id="message" label="Say something..." class="flex"></paper-input>
+            <paper-button raised on-tap="send">Send</paper-button>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'my-chat',
+
+            send: function (e) {
+                this.$.chat.add({
+                    user: this.$.nick.value,
+                    message: this.$.message.value
+                });
+                this.$.message.value = "";
+            },
+
+            ready: function() {
+                this.$.login.toggle();
+            },
+
+            login: function() {
+                this.$.login.toggle();
+            }
+        });
+    </script>
+</dom-module>
