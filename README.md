@@ -1,5 +1,22 @@
 # Javeo Polymer Chat
 
+#### Pobranie zależności
+```
+ $ npm install
+ $ bower install
+```
+
+#### Uruchomienie aplikacji
+```
+ $ gulp serve
+```
+
+#### Przełączenie się na czystą aplikację
+```
+ $ git checkout beginning
+ $ git checkout -b chat
+```
+
 #### Utworzenie nowego komponentu
 ##### app/elements/my-chat/my-chat.html
 ```html
@@ -67,7 +84,7 @@
 ```
 
 #### Wysyłanie wiadomości
-##### app/elements/elements.html
+##### app/elements/my-chat/my-chat.html
 ```js
 send: function (e) {
    this.$.chat.add({
