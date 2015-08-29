@@ -1,23 +1,23 @@
 # Javeo Polymer Chat
 
-#### Pobranie zależności
+#### 1. Pobranie zależności
 ```
  $ npm install
  $ bower install
 ```
 
-#### Uruchomienie aplikacji
+#### 2. Uruchomienie aplikacji
 ```
  $ gulp serve
 ```
 
-#### Przełączenie się na czystą aplikację
+#### 3. Przełączenie się na czystą aplikację
 ```
  $ git checkout beginning
  $ git checkout -b chat
 ```
 
-#### Utworzenie nowego komponentu
+#### 4. Utworzenie nowego komponentu
 ##### app/elements/my-chat/my-chat.html
 ```html
 <dom-module id="my-chat">
@@ -29,13 +29,13 @@
 </dom-module>
 ```
 
-#### Zaimportowanie własnego komponentu
+#### 5. Zaimportowanie własnego komponentu
 ##### app/elements/elements.html
 ```html
 <link rel="import" href="my-chat/my-chat.html">
 ```
 
-#### Użycie własnego komponentu
+#### 6. Użycie własnego komponentu
 ##### app/index.html
 ```html
 <section data-route="home">
@@ -45,7 +45,7 @@
 </section>
 ```
 
-#### Podłączanie się do Firebase
+#### 7. Podłączanie się do Firebase
 ##### app/elements/my-chat/my-chat.html
 ```html
 <template is="paper-material" elevation="1">
@@ -54,7 +54,7 @@
 </template>
 ```
 
-#### Wyświetlanie wiadomości
+#### 8. Wyświetlanie wiadomości
 ##### app/elements/my-chat/my-chat.html
 ```html
 <template is="dom-repeat" items="{{messages}}">
@@ -65,7 +65,7 @@
 </template>
 ```
 
-#### Wpisywanie wiadomości
+#### 9. Wpisywanie wiadomości
 ##### app/elements/my-chat/my-chat.html
 ```html
 <div class="layout horizontal">
@@ -74,7 +74,7 @@
 </div>
 ```
 
-#### Okno logowania do czatu
+#### 10. Okno logowania do czatu
 ##### app/elements/my-chat/my-chat.html
 ```html
 <paper-dialog id="login" modal>
@@ -83,7 +83,7 @@
 </paper-dialog>
 ```
 
-#### Wysyłanie wiadomości
+#### 11. Wysyłanie wiadomości
 ##### app/elements/my-chat/my-chat.html
 ```js
 send: function (e) {
@@ -95,7 +95,7 @@ send: function (e) {
 }
 ```
 
-#### Logowanie do czatu
+#### 12. Logowanie do czatu
 ##### app/elements/my-chat/my-chat.html
 ```js
 ready: function() {
